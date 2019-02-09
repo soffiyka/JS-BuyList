@@ -121,4 +121,38 @@ body{
 .rightalign{
 	text-align: right;
 }
+.rightlistrow{
+	padding: 15px;
+	border-bottom: 1px solid lightgrey;
+	font-weight: 700;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+.item{
+	background-color: rgba(230, 230, 230, 1);
+	display: inline-block;
+	height: 15px;
+	padding: 7px;
+	border-radius: 5px;
+	font-size: 10px;
+	text-align: center;
+	margin: 1px 0 0 1px;
+	font-weight: 10;
+	color: rgba(0, 0, 0, 0.6);
+
+}
+.rightamount {
+	background-color: rgb(255, 115, 0);
+	display: inline-block;
+	height: 20px;
+	border-radius: 50%;
+	width: 20px;
+	font-size: 10px;
+	color: white;
+	font-weight: bold;
+	line-height: 20px;
+}
+.bought{
+	text-decoration: line-through;
+}
 
