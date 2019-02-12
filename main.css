@@ -46,6 +46,7 @@ body{
 	border: none;
 	font-weight: bold;
 	color: white;
+	cursor: pointer;
 }
 .leftlistrow{
 	padding: 10px;
@@ -79,12 +80,14 @@ body{
 	color: white;
 	line-height: 0;
 	font-size: 15px;
+	cursor: pointer;
 }
 .minbut{
 	background-color: rgb(226, 61, 61);
 }
 .subtleminbut{
 	background-color: rgba(226, 61, 61, 0.6);
+	cursor: auto;
 }
 .plusbut{
 	background-color: rgb(0, 128, 0);
@@ -100,6 +103,7 @@ body{
 	font-weight: 700;
 	color: rgba(0, 0, 0, 0.6);
 	border: none;
+	cursor: pointer;
 }
 .delbut{
 	display: inline-block;
@@ -113,6 +117,7 @@ body{
 	line-height: 0;
 	padding: 6px;
 	background-color: rgb(226, 61, 61);
+	cursor: pointer;
 
 }
 .centered{
