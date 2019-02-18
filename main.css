@@ -179,6 +179,8 @@ body{
 	background-color: purple;
 	border-radius: 10px 10px 0 0;
 	padding: 10px;
+
+	transition: all 1s ease;
 }
 
 .upper-badge{
@@ -203,9 +205,27 @@ body{
 	font-weight: 100;
 }
 
-
-
-
-
-
-
+.badge:hover{
+	background-color: rgb(53, 2, 138);
+	transform: translateY(-60px);
+	transition: all 1s ease;
+}
+@media print{
+	.badge{
+		background-color: white;
+		border: 1px solid purple;
+		padding: 5px 3px;
+	}
+	.upper-badge{
+		display: none;
+	}
+	.lower-badge{
+		margin: 0;
+		font-weight: 700;
+		font-size: 10px;
+		padding-bottom: 5px;
+	}
+	.badgetext {
+		color: black;
+	}
+}
