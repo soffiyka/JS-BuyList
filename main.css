@@ -8,6 +8,13 @@ body{
 	height: 200px;
 }
 
+.clearfix::after{
+	visibility: hidden;
+	display: block;
+	content: "";
+	height: 0;
+	clear: both;
+}
 .maincolumn{
 	background-color: white;
 	float: left;
@@ -24,23 +31,28 @@ body{
 }
 
 .addtolist{
+	position: relative;
 	height: 50px;
 	padding: 10px;
-	width: 100%;
+	width: 98%;
 	border-bottom: 1px solid lightgrey;
 }
 
 .nameinput{
+	position: absolute;
+	right: 15px;
+	left: 10px;
 	border: 1px solid lightgrey;
 	border-radius: 5px 0 0 5px;
-	width: 82%;
+	width: 90%;
 	height: 40px;
 	box-sizing: border-box;
 	float: left;
 	padding: 10px;
 }
 .addtolistbut{
-	float: left;
+	position: absolute;
+	right: 30px;
 	height: 40px;
 	width: 100px;
 	box-sizing: border-box;
@@ -227,5 +239,14 @@ body{
 	}
 	.badgetext {
 		color: black;
+	}
+}
+@media (max-width: 500px){
+	.right{
+		width: 95%;
+		margin: 50px 0 100px 0;
+}
+	.left{
+		width: 95%;
 	}
 }
