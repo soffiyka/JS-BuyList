@@ -31,7 +31,6 @@ body{
 }
 
 .addtolist{
-	position: relative;
 	height: 50px;
 	padding: 10px;
 	width: 98%;
@@ -39,20 +38,16 @@ body{
 }
 
 .nameinput{
-	position: absolute;
-	right: 15px;
-	left: 10px;
 	border: 1px solid lightgrey;
 	border-radius: 5px 0 0 5px;
-	width: 90%;
+	width: 82%;
 	height: 40px;
 	box-sizing: border-box;
 	float: left;
 	padding: 10px;
 }
 .addtolistbut{
-	position: absolute;
-	right: 30px;
+	float: left;
 	height: 40px;
 	width: 100px;
 	box-sizing: border-box;
@@ -249,4 +244,35 @@ body{
 	.left{
 		width: 95%;
 	}
+}
+.tooltip{
+	position: relative;
+}
+.tooltip::after{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	content: attr(data-tooltip);
+	background-color: purple;
+	border-radius: 5px;
+	visibility: hidden;
+	padding: 10px;
+	opacity: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+	color: white;
+	font-weight: 500;
+	transition: all 1s ease;
+	z-index: 3;
+	transform: scale(0.5);
+}
+.tooltip:hover::after{
+	top: 0;
+	transform: scale(2);
+	transform: translateY(-20px);
+	z-index: 3;
+	visibility: visible; 
+	opacity: 1;
+	transition: all 1s ease;
 }
