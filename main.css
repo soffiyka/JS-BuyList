@@ -7,6 +7,7 @@ body{
 	padding-top: 7%;
 	height: 200px;
 }
+
 .maincolumn{
 	background-color: white;
 	float: left;
@@ -21,6 +22,7 @@ body{
 	width: 30%;
 	margin-left: 10px;
 }
+
 .addtolist{
 	height: 50px;
 	padding: 10px;
@@ -38,6 +40,7 @@ body{
 	padding: 10px;
 }
 .addtolistbut{
+	float: left;
 	height: 40px;
 	width: 100px;
 	box-sizing: border-box;
@@ -48,6 +51,8 @@ body{
 	color: white;
 	cursor: pointer;
 }
+
+
 .leftlistrow{
 	padding: 10px;
 	border-bottom: 1px solid lightgrey;
@@ -60,6 +65,7 @@ body{
 	margin: 0;
 	display: inline-block;
 }
+
 .leftamount{
 	display: inline-block;
 	height: 25px;
@@ -160,4 +166,46 @@ body{
 .bought{
 	text-decoration: line-through;
 }
+
+.badge{
+	height: 100px;
+	width: 100px;
+	box-sizing: border-box;
+
+	position: fixed;
+	left: 20px;
+	bottom:-60px;
+
+	background-color: purple;
+	border-radius: 10px 10px 0 0;
+	padding: 10px;
+}
+
+.upper-badge{
+	text-align: center;
+}
+.lower-badge{
+	margin-top: 10px;
+	width: 100%;
+}
+
+
+.badgetext{
+	color: white;
+	font-size: 15px;
+	font-weight: 700;
+	font-family: sans-serif;
+}
+
+.createdby{
+	margin-top: 20px;
+	font-size: 10px;
+	font-weight: 100;
+}
+
+
+
+
+
+
 
