@@ -170,6 +170,7 @@ body{
 }
 .bought{
 	text-decoration: line-through;
+	display: none;
 }
 
 .badge{

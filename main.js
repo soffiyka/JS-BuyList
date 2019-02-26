@@ -18,6 +18,11 @@ $(function () {
             $prodLeft.find('.right-prodName').text(name);
             $('#leftover').append($prodLeft);
 
+            var $boughtProd = $('#boughtProd').clone();
+            $boughtProd.removeAttr('id');
+            $boughtProd.find('.itemName').text(name);
+            $('#crossedProd').append($boughtProd);
+
 
             //event on minus button
             var $minus = $newProd.find('.minBut');
@@ -31,6 +36,7 @@ $(function () {
                     count++;
                 $newProd.find('.leftamount').text(count);
                 $prodLeft.find('.rightamount').text(count);
+                $boughtProd.find('.rightamount').text(count);
 
             });
             //event on plus button
@@ -39,11 +45,36 @@ $(function () {
                count++;
                $newProd.find('.leftamount').text(count);
                $prodLeft.find('.rightamount').text(count);
+                $boughtProd.find('.rightamount').text(count);
                if(count>1){
                    $minus.css('background-color', 'rgb(226, 61, 61)');
                    $minus.css('cursor', 'pointer');
                }
             });
+
+            //event on del button
+            var $del =$newProd.find('.delbut');
+            if($del){
+              $del.click(function () {
+                  $newProd.remove();
+                  $prodLeft.remove();
+                  $boughtProd.remove();
+              });
+            }
+
+            //event on the bought button
+            var $boughtBut = $newProd.find('.boughtbut');
+            if($boughtBut){
+                $boughtBut.click(function () {
+                    $newProd.find(".for-add").css('text-decoration', 'line-through');
+                    $minus.remove();
+                    $plus.remove();
+                    $del.remove();
+                    $boughtBut.text('Не куплено');
+                    $boughtProd.css('display', 'inline-block');
+                    $boughtProd.find('.rightamount').css('display', 'inline-block');
+                });
+            }
         }
     }
 
