@@ -95,10 +95,8 @@ body{
 	font-size: 15px;
 	cursor: pointer;
 }
-.minbut{
-	background-color: rgb(226, 61, 61);
-}
-.subtleminbut{
+
+.minBut{
 	background-color: rgba(226, 61, 61, 0.6);
 	cursor: auto;
 }
@@ -155,7 +153,7 @@ body{
 	font-size: 10px;
 	text-align: center;
 	margin: 1px 0 0 1px;
-	font-weight: 10;
+	font-weight: 100;
 	color: rgba(0, 0, 0, 0.6);
 
 }
