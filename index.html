@@ -3,86 +3,76 @@
 <head lang="uk">
     <meta charset="UTF-8">
     <title>My Page</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-	<div class="container clearfix">
-		<div class="left maincolumn">
-			<div class="addtolist">
-				<input class="nameinput" type="text" name="prodname" placeholder="Назва товару">
-				<button class="addtolistbut tooltip" data-tooltip = "У список">Додати</button>
-			</div>
-			<div class="leftlistrow">	
-				<div class="sublist">
-					<span>Помідори</span>
-				</div>
-				<div class="sublist centered">
-					<button class="countbut minbut tooltip" data-tooltip = "Менше">−</button>			
-					<span class="leftamount">4</span>
-					<button class="countbut plusbut tooltip" data-tooltip = "Більше">+</button>
-				</div>
-				<div class="sublist rightalign">
-					<button class="boughtbut tooltip" data-tooltip = "Викреслити">Куплено</button>
-					<button class="delbut tooltip" data-tooltip = "Видалити">x</button>
-				</div>
-			</div>	
-			<div class="leftlistrow">
-				<div class="sublist">
-					<span>Огірки</span>
-				</div>
-				<div class="sublist centered">
-					<button class="countbut subtleminbut tooltip" data-tooltip = "Неможливо">−</button>
-					<span class="leftamount">1</span>
-					<button class="countbut plusbut tooltip" data-tooltip = "Більше">+</button>
-				</div>
-				<div class="sublist rightalign">
-					<button class="boughtbut tooltip" data-tooltip = "Викреслити">Куплено</button>
-					<button class="delbut tooltip" data-tooltip = "Видалити">x</button>
-				</div>
-			</div>
-			<div class="leftlistrow">
-				<div class="sublist">
-					<span class="bought">Сир</span>
-				</div>
-				<div class="sublist centered">
-					<span class="leftamount">1</span>
-				</div>
-				<div class="sublist rightalign">
-					<button class="boughtbut tooltip" data-tooltip = "Повернути">Не куплено</button>
-				</div>
-			</div>	
 
-		</div>
-		
-		<div class="right maincolumn">
-			<div class="rightlistrow">
-				<span>Залишилося</span>
-			</div>
-			<div class="rightlistrow">
-				<span class="item">Помідори
-					<span class="rightamount">4</span>
-				</span>
-				<span class="item">Огірки
-					<span class="rightamount">1</span>
-				</span>
-			</div>
-			<div class="rightlistrow">Куплено</div>
-			<div class="rightlistrow">
-				<span class="item bought">Сир
-						<span class="rightamount bought">1</span>
-				</span>
-			</div>
+<div class="container clearfix">
+    <div class="left maincolumn">
+        <div class="addtolist">
+            <input class="nameinput" type="text" name="prodname" placeholder="Назва товару">
+            <button id="toListBut" class="addtolistbut tooltip" data-tooltip="У список">Додати</button>
+        </div>
+        <!-- product list-->
+    </div>
 
-		</div>
-	</div>
-	<div class="badge">
-		<div class="upper-badge">
-			<span class="badgetext">Buy List</span>
-		</div>
-		<div class="lower-badge">	
-			<span class="badgetext createdby">Created by:</span>
-			<span class="badgetext">Sofiya Gak</span>
-		</div>
-	</div>
+    <div class="right maincolumn">
+        <div class="rightlistrow">
+            <span>Залишилося</span>
+        </div>
+        <div class="rightlistrow">
+            <!-- leftovers -->
+        </div>
+        <div class="rightlistrow">Куплено</div>
+        <div class="rightlistrow">
+            <!-- bought products-->
+
+        </div>
+
+    </div>
+</div>
+
+<!--HIDDEN-->
+<div class="leftlistrow" id="newProd">
+    <div class="sublist for-add">
+    </div>
+    <div class="sublist centered">
+        <button class="countbut subtleminbut tooltip" data-tooltip="Неможливо">−</button>
+        <span class="leftamount">1</span>
+        <button class="countbut plusbut tooltip" data-tooltip="Більше">+</button>
+    </div>
+    <div class="sublist rightalign">
+        <button class="boughtbut tooltip" data-tooltip="Викреслити">Куплено</button>
+        <button class="delbut tooltip" data-tooltip="Видалити">x</button>
+    </div>
+</div>
+
+<!-------------leftovers------------------->
+
+<span class="item" id="prodLeft">
+    <span class="right-prodName"></span>
+    <span class="rightamount">1</span>
+</span>
+
+<!-------------bought prods------------------->
+<span class="item bought" id="boughtProd">
+    <span class="itemName"></span>
+    <span class="rightamount bought">1</span>
+</span>
+<!----------------HIDDEN------------>
+
+<div class="badge">
+    <div class="upper-badge">
+        <span class="badgetext">Buy List</span>
+    </div>
+    <div class="lower-badge">
+        <span class="badgetext createdby">Created by:</span>
+        <span class="badgetext">Sofiya Gak</span>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
