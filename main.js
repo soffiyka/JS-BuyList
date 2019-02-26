@@ -63,16 +63,31 @@ $(function () {
             }
 
             //event on the bought button
+            var boughtButCount = 1;
             var $boughtBut = $newProd.find('.boughtbut');
             if($boughtBut){
                 $boughtBut.click(function () {
-                    $newProd.find(".for-add").css('text-decoration', 'line-through');
-                    $minus.remove();
-                    $plus.remove();
-                    $del.remove();
-                    $boughtBut.text('Не куплено');
-                    $boughtProd.css('display', 'inline-block');
-                    $boughtProd.find('.rightamount').css('display', 'inline-block');
+                    if(boughtButCount) {
+                        $newProd.find(".for-add").css('text-decoration', 'line-through');
+                        $minus.css('display', 'none');
+                        $plus.css('display', 'none');
+                        $del.css('display', 'none');
+                        $boughtBut.text('Не куплено');
+                        $boughtProd.css('display', 'inline-block');
+                        $boughtProd.find('.rightamount').css('display', 'inline-block');
+                        $prodLeft.css('display', 'none');
+                        boughtButCount--;
+                    }
+                    else{
+                        $newProd.find(".for-add").css('text-decoration', 'none');
+                        $minus.css('display', 'inline-block');
+                        $plus.css('display', 'inline-block');
+                        $del.css('display', 'inline-block');
+                        $boughtBut.text('Куплено');
+                        $boughtProd.css('display', 'none');
+                        $prodLeft.css('display', 'inline-block');
+                        boughtButCount++;
+                    }
                 });
             }
         }
