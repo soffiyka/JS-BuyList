@@ -170,7 +170,7 @@ body{
 }
 .bought{
 	text-decoration: line-through;
-	display: none;
+
 }
 
 .badge{
@@ -278,3 +278,8 @@ body{
 #prodLeft, #newProd, #boughtProd{
 	display: none;
 }
+#editName{
+	border-radius: 5%;
+	width: 60%;
+}
+
