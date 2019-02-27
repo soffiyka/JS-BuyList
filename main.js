@@ -1,6 +1,6 @@
 $(function () {
     function addProd(name) {
-        if (name) {
+        if (name.trim()) {
 
             var count = 1;
 
@@ -104,13 +104,17 @@ $(function () {
                 $editName.blur(function () {
                     $editDiv.hide();
                     $nameDiv.show();
-                    $nameDiv.text($editName.val());
-                    $prodLeft.find('.right-prodName').text($editName.val());
-                    $boughtProd.find('.itemName').text($editName.val());
+                    var $newName = $editName.val();
+                    if ($newName.trim()) {
+                    $nameDiv.text($newName);
+                    $prodLeft.find('.right-prodName').text($newName);
+                    $boughtProd.find('.itemName').text($newName);
+                }
                 });
             });
 
         }
+        $('.nameinput').val('');
     }
 
     //event on adding button
@@ -124,8 +128,6 @@ $(function () {
         if (e.which == 13) {
             var prodName = $('.nameinput').val();
             addProd(prodName);
-        } else if (e.which == 32) { //prevent space key
-            e.preventDefault();
         }
     });
 
