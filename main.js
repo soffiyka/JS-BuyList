@@ -36,6 +36,7 @@ $(function () {
                 if (count == 1) {
                     $minus.css('background-color', 'rgba(226, 61, 61, 0.6)');
                     $minus.css('cursor', 'auto');
+                    $minus.attr('data-tooltip', 'Неможливо');
                 } else if (count < 1)
                     count++;
                 $newProd.find('.leftamount').text(count);
@@ -53,6 +54,7 @@ $(function () {
                 if (count > 1) {
                     $minus.css('background-color', 'rgb(226, 61, 61)');
                     $minus.css('cursor', 'pointer');
+                    $minus.attr('data-tooltip', 'Менше');
                 }
             });
 
@@ -81,6 +83,7 @@ $(function () {
                         $boughtProd.find('.rightamount').show();
                         $prodLeft.hide();
                         boughtButCount--;
+                        $boughtBut.attr('data-tooltip', 'Повернути');
                     } else {
                         $nameDiv.css('text-decoration', 'none');
                         $minus.show();
@@ -90,6 +93,7 @@ $(function () {
                         $boughtProd.hide();
                         $prodLeft.show();
                         boughtButCount++;
+                        $boughtBut.attr('data-tooltip', 'Викреслити');
                     }
                 });
             }
