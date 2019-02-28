@@ -104,16 +104,23 @@ $(function () {
                 $nameDiv.hide();
                 $editDiv.show();
                 $editName.focus();
-                $editName.val($nameDiv.text());
-                $editName.blur(function () {
-                    $editDiv.hide();
-                    $nameDiv.show();
-                    var $newName = $editName.val();
-                    if ($newName.trim()) {
+                var $oldName = $nameDiv.text();
+                $editName.val($oldName);
+                var $newName;
+                $editName.keyup(function () {
+                    $newName = $editName.val();
                     $nameDiv.text($newName);
                     $prodLeft.find('.right-prodName').text($newName);
                     $boughtProd.find('.itemName').text($newName);
-                }
+                });
+                $editName.blur(function () {
+                    if(!$newName.trim()){
+                        $nameDiv.text($oldName);
+                        $prodLeft.find('.right-prodName').text($oldName);
+                        $boughtProd.find('.itemName').text($oldName);
+                    }
+                    $editDiv.hide();
+                    $nameDiv.show();
                 });
             });
 
