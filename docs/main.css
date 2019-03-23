@@ -1,0 +1,300 @@
+body{
+	background-color: lightgrey;
+}
+.container{
+	max-width: 1024px;
+	margin: auto;
+	padding-top: 7%;
+	height: 200px;
+}
+
+.clearfix::after{
+	visibility: hidden;
+	display: block;
+	content: "";
+	height: 0;
+	clear: both;
+}
+.maincolumn{
+	background-color: white;
+	float: left;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+.left{
+	width: 65%;
+}
+.right{
+	width: 30%;
+	margin-left: 10px;
+}
+
+.addtolist{
+	position: relative;
+	height: 50px;
+	padding: 10px;
+	width: 98%;
+	border-bottom: 1px solid lightgrey;
+}
+
+.nameinput{
+	position: absolute;
+	right: 15px;
+	left: 10px;
+	border: 1px solid lightgrey;
+	border-radius: 5px 0 0 5px;
+	width: 82%;
+	height: 40px;
+	box-sizing: border-box;
+	float: left;
+	padding: 10px;
+}
+.addtolistbut{
+	position: absolute;
+	right: 20px;
+	height: 40px;
+	width: 100px;
+	box-sizing: border-box;
+	border-radius: 0 3px 3px 0;
+	background-color: #2185D0;
+	border: none;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+}
+
+
+.leftlistrow{
+	position: relative;
+	padding: 10px;
+	border-bottom: 1px solid lightgrey;
+	width: 98%;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+.sublist{
+	width: 32.5%;
+	margin: 0;
+	display: inline-block;
+}
+
+.leftamount{
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	background-color: rgba(230, 230, 230, 1);
+	font-size: 12px;
+	border-radius: 20%;
+	text-align: center;
+	line-height: 25px;
+}
+.countbut{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	border: none;
+	font-weight: 600;
+	color: white;
+	line-height: 0;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.minBut{
+	background-color: rgba(226, 61, 61, 0.6);
+	cursor: auto;
+}
+.plusbut{
+	background-color: rgb(0, 128, 0);
+}
+.boughtbut{
+	position: absolute;
+	right: 2px;
+	display: inline-block;
+	height: 30px;
+	font-size: 10px;
+	border-radius: 7%;
+	background-color: rgba(230, 230, 230, 1);
+	padding: 10px 20px;
+	line-height: 0;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.6);
+	border: none;
+	cursor: pointer;
+}
+.delbut{
+	position: absolute;
+	right: 2px;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 15%;
+	border: none;
+	font-weight: 900;
+	font-size: 11px;
+	color: white;
+	line-height: 0;
+	padding: 6px;
+	background-color: rgb(226, 61, 61);
+	cursor: pointer;
+
+}
+.centered{
+	text-align: center;
+}
+.rightalign{
+	text-align: right;
+}
+.rightlistrow{
+	padding: 15px;
+	border-bottom: 1px solid lightgrey;
+	font-weight: 700;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+.item{
+	background-color: rgba(230, 230, 230, 1);
+	display: inline-block;
+	height: 15px;
+	padding: 7px;
+	border-radius: 5px;
+	font-size: 10px;
+	text-align: center;
+	margin: 1px 0 0 1px;
+	font-weight: 100;
+	color: rgba(0, 0, 0, 0.6);
+
+}
+.rightamount {
+	background-color: rgb(255, 115, 0);
+	display: inline-block;
+	height: 20px;
+	border-radius: 50%;
+	width: 20px;
+	font-size: 10px;
+	color: white;
+	font-weight: bold;
+	line-height: 20px;
+}
+.bought{
+	text-decoration: line-through;
+
+}
+
+.badge{
+	height: 100px;
+	width: 100px;
+	box-sizing: border-box;
+
+	position: fixed;
+	left: 20px;
+	bottom:-60px;
+
+	background-color: purple;
+	border-radius: 10px 10px 0 0;
+	padding: 10px;
+
+	transition: all 1s ease;
+}
+
+.upper-badge{
+	text-align: center;
+}
+.lower-badge{
+	margin-top: 10px;
+	width: 100%;
+}
+
+
+.badgetext{
+	color: white;
+	font-size: 15px;
+	font-weight: 700;
+	font-family: sans-serif;
+}
+
+.createdby{
+	margin-top: 20px;
+	font-size: 10px;
+	font-weight: 100;
+}
+
+.badge:hover{
+	background-color: rgb(53, 2, 138);
+	transform: translateY(-60px);
+	transition: all 1s ease;
+	cursor: pointer;
+}
+@media print{
+	.badge{
+		background-color: white;
+		border: 1px solid purple;
+		padding: 5px 3px;
+	}
+	.upper-badge{
+		display: none;
+	}
+	.lower-badge{
+		margin: 0;
+		font-weight: 700;
+		font-size: 10px;
+		padding-bottom: 5px;
+	}
+	.badgetext {
+		color: black;
+	}
+}
+@media (max-width: 500px){
+	.right{
+		width: 95%;
+		margin: 50px 0 100px 0;
+}
+	.left{
+		width: 95%;
+	}
+	.for-add{
+		width: 20%;
+	}
+}
+.tooltip{
+	position: relative;
+}
+
+.tooltip::after{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	content: attr(data-tooltip);
+	background-color: purple;
+	border-radius: 5px;
+	visibility: hidden;
+	padding: 10px;
+	opacity: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+	color: white;
+	font-weight: 500;
+	transition: all 1s ease;
+	z-index: 3;
+	transform: scale(0.5);
+}
+.tooltip:hover::after{
+	top: 0;
+	transform: scale(2);
+	transform: translateY(-20px);
+	z-index: 3;
+	visibility: visible; 
+	opacity: 1;
+	transition: all 1s ease;
+}
+#prodLeft, #newProd, #boughtProd{
+	display: none;
+}
+#editName{
+	border-radius: 5%;
+	width: 60%;
+}
+
